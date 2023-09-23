@@ -38,6 +38,16 @@ export function Post() {
           <a href="#">Link que leva para a pagina inicial.</a>
         </p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu Feedback</strong>
+
+        <textarea placeholder="Deixa um comentário" />
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
+        
+      </form>
     </article>
   );
 }
