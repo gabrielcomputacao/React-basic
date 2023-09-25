@@ -1,10 +1,14 @@
+import { Avatar } from "./Avatar";
 import styles from "./Comment.module.css";
-import { ThumbsUp, Trash } from '@phosphor-icons/react'
+import { ThumbsUp, Trash } from "@phosphor-icons/react";
 
 export function Comment() {
   return (
     <div className={styles.comment}>
-      <img src="https://github.com/gabrielcomputacao.png" />
+      <Avatar
+        hasBorder={false}
+        src={"https://github.com/gabrielcomputacao.png"}
+      />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
@@ -16,22 +20,19 @@ export function Comment() {
               </time>
             </div>
             {/* quadno o botao nao tiver texto e sim um icone e sempre bom colocar um title para os leitores de tela */}
-            <button title="Deletar Comentário" >
-                <Trash  size={24}/>
+            <button title="Deletar Comentário">
+              <Trash size={24} />
             </button>
-
           </header>
 
           <p>Muito Bom!</p>
         </div>
 
         <footer>
-
-            <button>
-                <ThumbsUp />
-                Aplaudir <span>20</span>
-            </button>
-
+          <button>
+            <ThumbsUp />
+            Aplaudir <span>20</span>
+          </button>
         </footer>
       </div>
     </div>
