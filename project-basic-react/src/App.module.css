@@ -9,7 +9,14 @@
 
 }
 
+/* quando se usa rem ele se basea no font size da aplicação e tudo de ajeita conforme a tela for diminuindo */
+
 @media screen and (max-width: 768px) {
+
+    html{
+        font-size: 87.5%;
+    }
+
     .wrapper{
         grid-template-columns: 1fr;
     }
