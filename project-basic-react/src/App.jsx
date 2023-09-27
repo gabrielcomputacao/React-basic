@@ -18,11 +18,11 @@ const posts = [
       role: "Software Developer",
     },
     content: [
-      { type: 'paragraph', content: 'Fala Galera!'} ,
-      {type: 'paragraph', content: 'Acabei de subir meu novo projeto'},
-      {type: 'link', content: 'https://github.com/gabrielcomputacao/'},
+      { type: "paragraph", content: "Fala Galera!" },
+      { type: "paragraph", content: "Acabei de subir meu novo projeto" },
+      { type: "link", content: "https://github.com/gabrielcomputacao/" },
     ],
-    publishAt: new Date('2023-09-26 20:00:00')
+    publishAt: new Date("2023-09-26 20:00:00"),
   },
   {
     id: 2,
@@ -32,11 +32,11 @@ const posts = [
       role: "Programador Junior",
     },
     content: [
-      { type: 'paragraph', content: 'Fala Galera eu sou o Igor!'} ,
-      {type: 'paragraph', content: 'Acabei de subir minha nova tarefa.'},
-      {type: 'link', content: 'https://github.com/gabrielcomputacao/'},
+      { type: "paragraph", content: "Fala Galera eu sou o Igor!" },
+      { type: "paragraph", content: "Acabei de subir minha nova tarefa." },
+      { type: "link", content: "https://github.com/gabrielcomputacao/" },
     ],
-    publishAt: new Date('2023-09-15 20:00:00')
+    publishAt: new Date("2023-09-15 20:00:00"),
   },
 ];
 
@@ -47,10 +47,14 @@ function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          
-        {
-          posts.map( (post,index) => <Post key={index} author={post.author} content={post.content} publishedAt={post.publishAt} /> )
-        }
+          {posts.map((post, index) => (
+            <Post
+              key={index}
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishAt}
+            />
+          ))}
         </main>
       </div>
     </>
