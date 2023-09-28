@@ -1,17 +1,17 @@
-.post{
+.post {
     background: var(--gray-800);
     border-radius: 8px;
     padding: 2.5rem;
 }
 
 /* estiliza todo post que tenha um post anterior */
-.post + .post{
+.post+.post {
     margin-top: 2rem;
 }
 
-.content{
+.content {
     line-height: 1.6;
-    color: var(--gray-300) ;
+    color: var(--gray-300);
     margin-top: 1.5rem;
 }
 
@@ -19,52 +19,53 @@
     margin-top: 1rem;
 }
 
-.content p a{
+.content p a {
     text-decoration: none;
     color: var(--green-500);
     font-weight: bold;
 }
 
-.content p a:hover{
+.content p a:hover {
     color: var(--green-300);
 }
 
 /* pega somento o primeiro header dentro do post */
-.post > header{
+.post>header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.post > header time{
+.post>header time {
     font-size: 0.875rem;
     color: var(--gray-400);
 }
 
-.author{
+.author {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.authorInfo{
+.authorInfo {
     display: flex;
     flex-direction: column;
 }
 
-.authorInfo strong{
-display: block;
-color: var(--gray-100);
-line-height: 1.6;
+.authorInfo strong {
+    display: block;
+    color: var(--gray-100);
+    line-height: 1.6;
 }
 
-.authorInfo{display: block;
+.authorInfo {
+    display: block;
     font-size: 0.875rem;
     color: var(--gray-400);
     line-height: 1.6;
 }
 
-.commentForm{
+.commentForm {
     width: 100%;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -72,12 +73,12 @@ line-height: 1.6;
 }
 
 /* estiliza a primeira tag strong */
-.commentForm > strong{
+.commentForm>strong {
     line-height: 1.6;
     color: var(--gray-100);
 }
 
-.commentForm textarea{
+.commentForm textarea {
     width: 100%;
     resize: none;
     border: 0;
@@ -105,7 +106,12 @@ line-height: 1.6;
 
 }
 
-.commentForm footer{
+.commentForm button[type=submit]:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+.commentForm footer {
     visibility: hidden;
     max-height: 0;
 }
@@ -119,16 +125,16 @@ line-height: 1.6;
 
 */
 
-.commentForm:focus-within footer{
+.commentForm:focus-within footer {
     visibility: visible;
     max-height: none;
 }
 
 
-.commentForm button[type=submit]:hover{
+.commentForm button[type=submit]:not(:disabled):hover {
     background: var(--green-300);
 }
 
-.commentList{
+.commentList {
     margin-top: 2rem;
 }
